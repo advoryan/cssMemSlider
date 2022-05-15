@@ -47,7 +47,7 @@
         .slider__item {
             width: 25%;
         }
-            img {
+            .slider__item img {
                 width: 100%;
             }
 
