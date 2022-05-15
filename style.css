@@ -19,14 +19,15 @@
     color: aliceblue;
     max-width: 50rem;
     min-width: 18rem;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    border: 1px grey solid;
-    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.38);
+    border: 1px rgb(109, 92, 92) solid;
+    border-radius: 8px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 @media (max-width: 768px) {
     .slider {
+        width: 95%;
         font-size: 1.2rem;
     }   
 }
@@ -88,15 +89,15 @@
     }
         .slider__labels label {
             cursor: pointer;
-            width: 1.55rem;
-            height: 1.55rem;
+            width: 2rem;
+            height: 1.8rem;
             display: flex;
             justify-content: center;
             align-items: center;
         }
             .slider__control-btn {
-                width: 0.8rem;
-                height: 0.8rem;
+                width: 1.2rem;
+                height: 1.2rem;
                 border: 2px solid aqua;
                 background-color: aqua;
                 border-radius: 50%;
@@ -104,6 +105,19 @@
             .slider__labels label:hover > .slider__control-btn {
                 background-color:white;
                 border-color: white;
+            }
+            .slider__labels label:active > .slider__control-btn {
+                outline: rgba(255, 255, 255, 0.692) 2px solid;
+            }
+            @media (max-width: 768px) {
+                .slider__labels label {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                }
+                    .slider__control-btn {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
             }
 
 /* -- controls action -- */
