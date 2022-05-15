@@ -10,17 +10,21 @@
 
 .slider {
     margin: 0 auto;
-    outline: 1px solid red;
+    padding: 15px;
     width: 80%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background-color: black;
+    color: aliceblue;
+    outline: 1px solid red;
 }
 
 input {
-    /* display: none; */
+    display: none;
 }
 
+/* -- img container -- */
 .slider__items {
 }
     .slider__wrapper {
@@ -32,39 +36,58 @@ input {
             width: 400%;
         }
             .slider__item {
-                /* width: 25%; */
-                /* width: 100%; */
             }
                 img {
                     width: 100%;
                 }
-
-.slider__imgs {
-    /* margin-left: -300%; */
+/* -- description and controls -- */
+.slider__lower-container {
+    margin-top: 15px;
+    display: flex;
 }
+    /* -- description -- */
+    .slider__description-wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
+        .slider__description-container {
+            display: flex;
+            width: 400%;
+        }
+            .slider__txt {
+                width: 100%;
+            }
+    /* -- controls -- */
+    .slider__label{
+        
+    }
+
+
 
 .slider__labels {
-    background-color: brown;
-    /* width: 100px; */
-    /* height: 100px; */
     display: flex;
 }
 .slider__labels > label {
-    width: 140px;
-    height: 140px;
+    width: 40px;
+    height: 40px;
     background-color:aqua;
-    /* outline: 10px red solid; */
 }
 
-#slide-1:checked ~ .slider__items .slider__imgs {
+#slide-1:checked ~ .slider__items .slider__imgs, 
+#slide-1:checked ~ .slider__lower-container .slider__description-container {
     margin-left: 0
 }
-#slide-2:checked ~ .slider__items .slider__imgs {
+#slide-2:checked ~ .slider__items .slider__imgs, 
+#slide-2:checked ~ .slider__lower-container .slider__description-container {
     margin-left: -100%;
 }
-#slide-3:checked ~ .slider__items .slider__imgs {
+#slide-3:checked ~ .slider__items .slider__imgs, 
+#slide-3:checked ~ .slider__lower-container .slider__description-container {
     margin-left: -200%;
 }
-#slide-4:checked ~ .slider__items .slider__imgs {
+#slide-4:checked ~ .slider__items .slider__imgs, 
+#slide-4:checked ~ .slider__lower-container .slider__description-container {
     margin-left: -300%;
-} 
+}
+
+
