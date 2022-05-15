@@ -59,19 +59,32 @@
                 width: 100%;
             }
     /* -- controls -- */
-    .slider__labels{
+    .slider__labels {
         margin-top: 1rem;
+        display: flex;
     }
+        .slider__labels label {
+            cursor: pointer;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .slider__control-btn {
+                width: 0.8rem;
+                height: 0.8rem;
+                border: 2px solid aqua;
+                background-color: aqua;
+                border-radius: 50%;
+            }
+            .slider__labels label:hover > .slider__control-btn {
+                background-color:white;
+                border-color: white;
+            }
 
-
-
+/* con */
 .slider__labels {
-    display: flex;
-}
-.slider__labels > label {
-    width: 2rem;
-    height: 2rem;
-    background-color:aqua;
 }
 
 /* -- controls action -- */
@@ -96,4 +109,12 @@
 .slider__imgs,
 .slider__description-container {
     transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+
+#slide-1:checked ~ .slider__lower-container label[for='slide-1'] .slider__control-btn,
+#slide-2:checked ~ .slider__lower-container label[for='slide-2'] .slider__control-btn,
+#slide-3:checked ~ .slider__lower-container label[for='slide-3'] .slider__control-btn,
+#slide-4:checked ~ .slider__lower-container label[for='slide-4'] .slider__control-btn {
+    background-color: black;
 }
