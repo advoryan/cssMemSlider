@@ -7,20 +7,18 @@
     align-items: center;
     background-color: rgb(190, 196, 197);
 }
-
 .slider {
     margin: 0 auto;
-    padding: 15px;
+    padding: 1rem;
     width: 80%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     background-color: black;
     color: aliceblue;
-    outline: 1px solid red;
+    max-width: 50rem;
 }
-
-input {
+.slider input {
     display: none;
 }
 
@@ -36,19 +34,22 @@ input {
             width: 400%;
         }
             .slider__item {
+                width: 25%;
             }
                 img {
                     width: 100%;
                 }
+
 /* -- description and controls -- */
 .slider__lower-container {
-    margin-top: 15px;
     display: flex;
+    gap: 1rem;
 }
     /* -- description -- */
     .slider__description-wrapper {
         overflow: hidden;
         width: 100%;
+        margin-top: 1rem;
     }
         .slider__description-container {
             display: flex;
@@ -58,8 +59,8 @@ input {
                 width: 100%;
             }
     /* -- controls -- */
-    .slider__label{
-        
+    .slider__labels{
+        margin-top: 1rem;
     }
 
 
@@ -68,11 +69,12 @@ input {
     display: flex;
 }
 .slider__labels > label {
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     background-color:aqua;
 }
 
+/* -- controls action -- */
 #slide-1:checked ~ .slider__items .slider__imgs, 
 #slide-1:checked ~ .slider__lower-container .slider__description-container {
     margin-left: 0
@@ -90,4 +92,8 @@ input {
     margin-left: -300%;
 }
 
-
+/* -- sliding animation -- */
+.slider__imgs,
+.slider__description-container {
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
